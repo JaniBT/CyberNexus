@@ -13,7 +13,9 @@
     --clr-transparent-white: rgb(255 255 255 / 0.7);
     --clr-white: #fff;
     --clr-gray: #C0C0C0;
+    --clr-charcoal: #36454F;
     --clr-darkgrayish: #101820;
+    --clr-darkgray: #A9A9A9;
 }
 
 *,
@@ -24,6 +26,7 @@
 
 html{
     font-family: var(--ff);
+    line-height: 1.1;
 }
 
 body{
@@ -78,4 +81,56 @@ body{
     cursor: pointer;
     color: white;
     transition: all 0.3s ease-in;
+}
+
+.main_page_full{
+    height: 70dvh;
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+}
+
+.main_section{
+    display: block;
+    
+    align-self: center;
+    width: 22rem;
+}
+
+.main_section h2{
+    font-size: var(--fs-200);
+    color: var(--clr-darkgray);
+    margin: 0;
+    padding: 0;
+}
+
+.main_section p{
+    text-align: left;
+    color: var(--clr-white);
+    font-size: var(--fs-400);
+    margin: 0;
+    padding: 0;
+}
+
+.main_socials{
+    width: 4rem;
+    display: flex;
+    gap: 3rem;
+    align-self: center;
+    flex-direction: column;
+    margin-right: 1.05rem;
+}
+
+.main_socials a{
+    text-decoration: none;
+    color: var(--clr-white);
+    align-self: center;
+    border: 1px solid var(--clr-white);
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+.main_socials i{
+    font-size: var(--fs-200);
+    align-self: center;
 }
