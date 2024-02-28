@@ -1,0 +1,11 @@
+Oldalak favicon-ja: ./assets/logos/cyber_nexus_logo.jpg
+
+-------- Szkriptek és Stylesheet-ek --------
+
+Főoldal: ./scripts/main_script.js
+         ./stylesheets/main_style.css
+
+-------- Főoldal --------
+
+Betűtípus: Poppins, sans-serif
+Háttérkép: ./assets/images/main_bg_body.jpg
