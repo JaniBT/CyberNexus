@@ -28,6 +28,11 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
 html{
     user-select: none;
     font-family: var(--ff);
@@ -37,6 +42,29 @@ html{
 body{
     margin: 0;
     padding: 0;
+}
+
+.scroll-btn{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    transform: translate(-5%, -5%);
+}
+
+.scroll-button{
+    background-color: transparent;
+    color: var(--clr-white);
+    border: 1px solid var(--clr-white);
+    padding: 0.9em 1em;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.scroll-button:hover{
+    color: var(--clr-darkgrayish);
+    background-color: var(--clr-white);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .main_page{
@@ -93,7 +121,6 @@ body{
     align-items: center;
     width: 150px;
     height: 100%;
-    overflow-y: hidden;
     position: absolute;
     right: 0;
     top: 0;
@@ -221,6 +248,10 @@ body{
     background-color: var(--clr-white);
     border: 1px solid var(--clr-darkgrayish);
     padding: 0.4rem;
+}
+
+.munkaim {
+    height: 100dvh;
 }
 
 /* ANIMÁCIÓK OLDAL TÖLTÉSNÉL */
