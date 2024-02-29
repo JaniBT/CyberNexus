@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberNexus</title>
+    <title>CyberNexus 🥵</title>
     <!-- Font Awesome Ikonok -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Favicon -->
@@ -14,21 +14,44 @@
     <div class="main_page">
         <header class="main_nav">
             <h1><a href="">CyberNexus</a></h1>
-            <div class="hamburger-menu">
-                <button type="button" onclick=""><i class="fa fa-bars"></i></button>
-            </div>
         </header>
-        <div class="main_page_full">
-            <section class="main_section">
-                <h2>A CyberNexusnál</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptates alias, at unde praesentium odit ea voluptas placeat magnam est.</p>
-            </section>
-            <aside class="main_socials">
-                <a href="#" title="Facebook"><i class="fa fa-facebook-square"></i></a>
-                <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
-                <a href="#" title="Twitter / X"><i class="fa fa-twitter"></i></a>
-                <a href="#" title="Github"><i class="fa fa-github"></i></a>
-            </aside>
+        <aside class="right-sidebar">
+            <div class="hamburger-menu">
+                <button type="button" onclick="openNav()"><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="socials">
+                <div class="social-icon">
+                    <a href="#"><i class="fa fa-facebook-square"></i></a>
+                </div>
+                <div class="social-icon">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+                <div class="social-icon">
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+                <div class="social-icon">
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content">
+            <h2>A CyberNexus</h2>
+            <p>azon dolgozik, hogy a fejlesztőknek könnyebben menjen a haladás, és a fejlődés. Általunk nyújtott Segédanyagokkal és kész Template-ekkel a fejlesztés folyamata is lecsökken, így idő marad a lényegi munkára.</p>
+        </div>
+        
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+            <h3>Menüpontok</h3>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><select name="munkak" id="munkaim">
+                    <option value="0" selected disabled>Munkáim</option>
+                    <option value="1">Roxfort Weboldal</option>
+                    <option value="2">LumaR Weboldal</option>
+                    <option value="3">LenonCode Weboldal</option>
+                </select></li>
+                <li><a href="#">Rólam</a></li>
+            </ul>
         </div>
     </div>
     <script src="./scripts/main_script.js"></script>

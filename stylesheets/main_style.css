@@ -5,10 +5,14 @@
 
     --fs-200: 1.125rem;
     --fs-400: 1.35rem;
+    --fs-450: 1.4rem;
     --fs-550: 1.5rem;
     --fs-650: 1.75rem;
     --fs-750: 1.9rem;
     --fs-800: 2.2rem;
+
+    --fw-bold: bold;
+    --fw-bolder: bolder;
 
     --clr-transparent-white: rgb(255 255 255 / 0.7);
     --clr-white: #fff;
@@ -25,6 +29,7 @@
 }
 
 html{
+    user-select: none;
     font-family: var(--ff);
     line-height: 1.1;
 }
@@ -53,6 +58,7 @@ body{
     margin: 0;
     padding-block: var(--pd-15);
     padding-inline: calc(var(--pd-15) + var(--pr-05));
+    animation: focim_animacio 1s ease-in-out;
 }
 
 .main_nav a{
@@ -61,12 +67,10 @@ body{
 }
 
 .hamburger-menu{
-    padding-block: var(--pd-15);
-    padding-inline: calc(var(--pd-15) + var(--pr-05));
+    padding-block: 2rem;
 }
 
 .hamburger-menu button{
-    align-self: center;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -75,62 +79,176 @@ body{
 
 .hamburger-menu button i{
     font-size: var(--fs-650);
+    color: var(--clr-white);
 }
 
 .hamburger-menu button:hover{
     cursor: pointer;
-    color: white;
     transition: all 0.3s ease-in;
 }
 
-.main_page_full{
-    height: 70dvh;
+.right-sidebar{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: navigacios_sav 1s ease-in-out;
+}
+
+.socials{
+    margin-block: auto;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    flex-direction: column;
     gap: 4rem;
-    justify-content: space-between;
-}
-
-.main_section{
-    display: block;
-    
     align-self: center;
-    width: 22rem;
 }
 
-.main_section h2{
+.social-icon a{
+    color: var(--clr-white);
+    font-size: var(--fs-450);
+}
+
+.social-icon i{
+    border-radius: 60px;
+    border: 1px solid white;
+    padding: 0.6em 0.7em;
+    transition: all 0.3s ease-out;
+}
+
+.social-icon i:hover{
+    background-color: var(--clr-white);
+    color: var(--clr-darkgrayish);
+    border-color: var(--clr-darkgrayish);
+    transition: all 0.3s ease-in;
+}
+
+.main-content{
+    width: 30%;
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    transform: translate(-20%, -55%);
+    animation: main_szoveg 1s ease;
+}
+
+.main-content h2{
     font-size: var(--fs-200);
     color: var(--clr-darkgray);
     margin: 0;
-    padding: 0;
 }
 
-.main_section p{
-    text-align: left;
-    color: var(--clr-white);
-    font-size: var(--fs-400);
+.main-content p{
+    text-align: justify;
+    font-family: var(--ff);
+    font-size: var(--fs-650);
     margin: 0;
+    color: var(--clr-white);
+}
+
+@media screen and (max-width: 1000px) {
+    .socials{
+        display: none;
+    }
+    .main-content{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main-content{
+        width: 80%;
+    }
+}
+
+.sidebar {
+    width: 200px;
+    height: 100dvh;
+    background-color: var(--clr-white);
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.sidebar a{
+    font-size: var(--fs-450);
+    font-weight: var(--fw-bolder);
+    text-decoration: none;
+    color: var(--clr-gray);
+}
+
+.sidebar h3{
+    color: var(--clr-darkgrayish);
+    font-size: var(--fs-400);
+}
+
+.sidebar ul{
+    list-style-type: none;
     padding: 0;
 }
 
-.main_socials{
-    width: 4rem;
-    display: flex;
-    gap: 3rem;
-    align-self: center;
-    flex-direction: column;
-    margin-right: 1.05rem;
+.sidebar li{
+    margin-block: 1.5rem;
+    color: var(--clr-darkgrayish);
 }
 
-.main_socials a{
-    text-decoration: none;
-    color: var(--clr-white);
-    align-self: center;
-    border: 1px solid var(--clr-white);
-    padding: 1rem;
-    border-radius: 100%;
-}
-
-.main_socials i{
+.sidebar ul li a{
+    color: var(--clr-darkgrayish);
+    font-weight: 400;
     font-size: var(--fs-200);
-    align-self: center;
+    transition: all 0.3s ease-out;
+}
+
+.sidebar ul li a:hover{
+    color: #A9A9A9;
+    transition: all 0.3s ease-in;
+}
+
+#munkaim{
+    background-color: var(--clr-white);
+    border: 1px solid var(--clr-darkgrayish);
+    padding: 0.4rem;
+}
+
+/* ANIMÁCIÓK OLDAL TÖLTÉSNÉL */
+/* ------------------------- */
+
+@keyframes focim_animacio {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes navigacios_sav {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes main_szoveg{
+    0% {
+        transform: translate(-85%, -55%);
+    }
+    100%{
+        transform: translate(-20%, -55%);
+    }
 }
