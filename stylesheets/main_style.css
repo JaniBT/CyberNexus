@@ -46,9 +46,10 @@ body{
 
 .scroll-btn{
     position: fixed;
-    right: 5%;
+    left: 5%;
     bottom: 5%;
     transform: translate(-5%, -5%);
+    animation: scroll_btn 1s ease-in-out;
 }
 
 .scroll-button{
@@ -277,9 +278,18 @@ body{
 
 @keyframes main_szoveg{
     0% {
-        transform: translate(-85%, -55%);
+        transform: translate(-200%, -55%);
     }
     100%{
         transform: translate(-20%, -55%);
+    }
+}
+
+@keyframes scroll_btn{
+    0% {
+        transform: translate(-500%, -5%);
+    }
+    100% {
+        transform: translate(-5%, -5%);
     }
 }
