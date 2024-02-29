@@ -44,31 +44,8 @@ body{
     padding: 0;
 }
 
-.scroll-btn{
-    position: fixed;
-    left: 5%;
-    bottom: 5%;
-    transform: translate(-5%, -5%);
-    animation: scroll_btn 1s ease-in-out;
-}
-
-.scroll-button{
-    background-color: transparent;
-    color: var(--clr-white);
-    border: 1px solid var(--clr-white);
-    padding: 0.9em 1em;
-    border-radius: 50%;
-    transition: all 0.3s ease-in-out;
-}
-
-.scroll-button:hover{
-    color: var(--clr-darkgrayish);
-    background-color: var(--clr-white);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
 .main_page{
+    scroll-snap-align: start;
     background: url('../assets/images/main_bg_body.jpg') center/cover no-repeat;
     height: 100dvh;
 }
@@ -180,22 +157,38 @@ body{
     color: var(--clr-white);
 }
 
+.socials-in-sidebar{
+    display: none;
+}
+
 @media screen and (max-width: 1000px) {
     .socials{
         display: none;
-    }
+    }    
+
     .main-content{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         position: absolute;
         width: 60%;
+        animation: none;
+    }
+    .socials-in-sidebar{
+        display: block;
+    }
+    .socials-in-sidebar ul li{
+        display: inline-block;
+        margin: 0.5rem;
     }
 }
 
 @media screen and (max-width: 750px) {
     .main-content{
         width: 80%;
+    }
+    .right-sidebar{
+        width: 100px;
     }
 }
 
@@ -251,9 +244,6 @@ body{
     padding: 0.4rem;
 }
 
-.munkaim {
-    height: 100dvh;
-}
 
 /* ANIMÁCIÓK OLDAL TÖLTÉSNÉL */
 /* ------------------------- */
