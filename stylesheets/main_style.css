@@ -20,6 +20,7 @@
     --clr-charcoal: #36454F;
     --clr-darkgrayish: #101820;
     --clr-darkgray: #A9A9A9;
+    --clr-green: #59be5d;
 }
 
 *,
@@ -281,5 +282,158 @@ body{
     }
     100% {
         transform: translate(-5%, -5%);
+    }
+}
+
+/* About Me Page CSS */
+/* ----------------- */
+
+.about-me-navbar{
+    margin-block: 2rem;
+    margin-inline: auto;
+    width: max-content;
+    border-radius: 2rem;
+    box-shadow: 0px 3px 19px 14px rgb(0 0 0 / 0.1);
+    background-color: var(--clr-white);
+    animation: aboutme_navbar 0.7s ease;
+}
+
+.about-me-navbar ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+.about-me-navbar li {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.about-me-navbar li a {
+    text-decoration: none;
+    color: var(--clr-darkgrayish);
+}
+
+.about-me-navbar li a:hover{
+    color: var(--clr-green);
+}
+
+.owner-section{
+    margin-block: 4rem;
+}
+
+.circle-div{
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.ceo-img-circle{
+    height: 350px;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: url(../assets/images/ceo-img.jpg) center/cover no-repeat;
+    margin-inline: 2rem;
+    animation: circle_image 1s ease;
+}
+
+.ceo-titles{
+    text-align: center;
+}
+
+.ceo-titles h2{
+    font-size: var(--fs-800);
+    color: var(--clr-darkgrayish);
+    animation: aboutme_text 0.7s ease;
+}
+
+.ceo-titles h3{
+    margin: 0;
+    font-size: var(--fs-650);
+    font-weight: 200;
+    font-style: italic;
+    color: var(--clr-darkgrayish);
+    animation: aboutme_text 1s ease;
+}
+
+.aboutme-socials{
+    display: flex;
+    width: 20rem;
+    height: 10rem;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    width: 800px;
+    border: 1px solid black;
+}
+
+.aboutme-social-icon{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.aboutme-social-icon a i{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 0.5em 0.6em;
+    text-decoration: none;
+    font-size: var(--fs-550);
+    color: var(--clr-darkgrayish);
+    transition: all 0.2s ease-out;
+}
+
+.aboutme-social-icon a i:hover{
+    color: var(--clr-white);
+    background-color: var(--clr-darkgrayish);
+    transition: all 0.2s ease-in;
+}
+
+.company-section{
+    margin-block: 4rem;
+    text-align: center;
+}
+
+.emailtag p{
+    margin: 0;
+    padding: 0;
+    animation: aboutme_text 1s ease;
+}
+
+/* Animációk aboutme oldalon */
+/* ------------------------- */
+
+@keyframes aboutme_navbar {
+    0%{
+        transform: translateY(-200%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes aboutme_text {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes circle_image {
+    0%{
+        transform: translateX(-500%)
+    }
+    100%{
+        transform: translateX(0);
     }
 }
