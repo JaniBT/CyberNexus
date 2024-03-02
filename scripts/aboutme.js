@@ -46,3 +46,28 @@ window.addEventListener('scroll', e => {
     scrollToTop.classList.add("hidden-button")
   }
 })
+
+
+const anim1 = document.querySelectorAll('.anim1')
+const anim2 = document.querySelectorAll('.anim2')
+
+function addAnimation() {
+  anim1.forEach(anim => {
+    anim.classList.add('animate1')
+  })
+  anim2.forEach(anim => {
+    anim.classList.add('animate2')
+  })
+}
+
+const observe2 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      addAnimation()
+    }
+  })
+})
+
+anim1.forEach(anim => {
+  observe2.observe(anim)
+})

@@ -9,3 +9,29 @@ Főoldal: ./scripts/main_script.js
 
 Betűtípus: Poppins, sans-serif
 Háttérkép: ./assets/images/main_bg_body.jpg
+
+-------- Rólunk ---------
+
+A CyberNexus egy vezető vállalat, amely template-ek és segédanyagok fejlesztésével és kiadásával foglalkozik. Célunk, hogy segítsünk ügyfeleinknek hatékonyan és professzionálisan megjeleníteni vállalkozásukat.
+
+## Szolgáltatásaink
+
+- **Template-ek**: Kínálatunkban szerepelnek weboldal, e-mail, prezentáció és dokumentum template-ek, amelyek testreszabhatóak az ügyfelek igényei szerint.
+- **Segédanyagok**: Továbbá készítünk hasznos segédanyagokat, mint például oktatóvideók, útmutatók és tippek, hogy ügyfeleink könnyedén kihasználhassák a template-eket.
+
+## Miért minket válasszon?
+
+- **Professzionális design**: Template-eket készítünk tapasztalt dizájnerekkel, hogy ügyfeleink vállalkozása kiemelkedjen a tömegből.
+- **Testreszabhatóság**: Minden template testreszabható az ügyfelek igényei szerint, így biztosítva, hogy a végeredmény tökéletesen illeszkedjen a vállalkozás arculatához.
+- **Könnyű használat**: Segédanyagainkkal és dokumentációinkkal biztosítjuk, hogy ügyfeleink könnyedén használhassák és testreszabják a template-eket.
+- **Ügyfélorientált szemlélet**: Ügyfeleink elégedettsége a legfontosabb számunkra, ezért folyamatos támogatást és szaktanácsadást nyújtunk.
+
+## Kapcsolat
+
+Ha szeretne többet megtudni a TemplateMaster vállalatról, vagy érdeklődik szolgáltatásaink iránt, kérjük, lépjen kapcsolatba velünk az alábbi elérhetőségeken:
+
+- Telefon: +36 123 456 789
+- E-mail: info@templatemaster.com
+- Weboldal: [www.templatemaster.com](http://www.templatemaster.com)
+
+Várjuk szeretettel, hogy segíthessünk vállalkozásának sikeres megjelenésében!

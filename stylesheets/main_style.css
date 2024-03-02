@@ -385,6 +385,10 @@ hr{
     transition: opacity 1s;
 }
 
+.aboutme-body{
+    overflow-x: hidden;
+}
+
 .aboutme-social-icon a i{
     border: 1px solid black;
     border-radius: 50%;
@@ -428,6 +432,185 @@ hr{
     text-shadow: var(--clr-green) 1px 0 10px;
     font-size: var(--fs-400);
     color: var(--clr-white);
+}
+
+.about-company-section{
+    overflow-x: hidden;
+    height: 100%;
+    background: url(../assets/images/company-main-div-bg.jpg) center/cover no-repeat fixed;
+}
+
+.about-comp{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-inline: 3rem;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.comps {
+    height: 20rem;
+}
+
+.comp{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    background: url(../assets/images/comp.svg) center/cover no-repeat;
+    box-shadow: 12px 15px 21px -6px rgba(0,0,0,0.3);
+    border-radius: 1rem;
+}
+
+.comp h4{
+    color: var(--clr-white);
+    font-size: var(--fs-550);
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+}
+
+.comp p{
+    padding: 1.5rem;
+    font-size: var(--fs-200);
+    text-align: justify;
+    color: var(--clr-white);
+}
+
+.comp2{
+    background: url(../assets/images/comp2.svg) center/cover no-repeat;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    border-radius: 1rem;
+    box-shadow: 12px 15px 21px -6px rgba(0,0,0,0.3);
+}
+
+.comp2 h4{
+    padding: 1rem;
+    font-size: var(--fs-550);
+    text-align: center;
+    color: var(--clr-white);
+}
+
+.comp2 ul{
+    display: flex;
+    gap: 2rem;
+}
+
+.comp2 li{
+    color: var(--clr-white);
+    padding: 1rem;
+}
+
+.comp3{
+    box-shadow: 12px 15px 21px -6px rgba(0,0,0,0.3);
+    grid-row: 2;
+    grid-column: 2 / span 3;
+    background: url(../assets/images/comp4.svg) center/cover no-repeat;
+    border-radius: 1rem;
+}
+
+.comp3 h4{
+    text-align: center;
+    color: var(--clr-white);
+    font-size: var(--fs-550);
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.comp3 ul{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1rem;
+    margin-inline: auto;
+}
+
+.comp3 li{
+    flex: 1;
+    color: var(--clr-white);
+}
+
+.comp4{
+    box-shadow: 12px 15px 21px -6px rgba(0,0,0,0.3);
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background: url(../assets/images/comp3.svg) center/cover no-repeat;
+    border-radius: 1rem;
+}
+
+.comp4 h4{
+    font-size: var(--fs-550);
+    color: var(--clr-white);
+    font-weight: bold;
+    text-align: center;
+}
+
+.comp4 p{
+    color: var(--clr-white);
+    padding: 1rem;
+}
+
+.comp4 p:last-child{
+    padding: 0 1rem 0 1rem;
+}
+
+.comp4 li{
+    color: var(--clr-white);
+}
+
+.animate1{
+    animation: comps13 1s ease;
+}
+
+.animate2{
+    animation: comps24 1s ease;
+}
+
+@media screen and (max-width: 1350px) {
+    .about-comp{
+        display: block;
+    }
+    .comp{
+        height: fit-content;
+    }
+    .comp h4{
+        margin-top: 0;
+    }
+    .comp2{
+        height: auto;
+    }
+    .comp2 ul{
+        flex-direction: column;
+    }
+    .comp3{
+        height: auto;
+        padding: 0;
+    }
+    .comp3 ul{
+        margin-inline: 0;
+        margin: 0;
+        padding-block: 2rem;
+        width: 100%;
+        padding-right: 0.5rem;
+    }
+    .comp4 {
+        height: auto;
+    }
+    .comp4 h4{
+        padding-top: 0.5rem;
+    }
+    .comp4 p:last-child{
+        padding: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .company-main-div h4{
+        font-size: var(--fs-650);
+    }
 }
 
 .emailtag p{
@@ -507,6 +690,24 @@ hr{
 @keyframes circle_image {
     0%{
         transform: translateX(-500%)
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes comps13 {
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes comps24 {
+    0%{
+        transform: translateX(150%);
     }
     100%{
         transform: translateX(0);
