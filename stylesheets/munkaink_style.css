@@ -1,8 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --ff-poppins: 'Poppins', sans-serif;
+    --ff-montserrat: 'Montserrat', sans-serif;
+
+    --clr-white: #fff;
+    --clr-whiteGray: hsl(352, 20%, 92%);
+    --clr-darkgrayish: #101820;
+    --clr-black: #000000;
+    --clr-red: #cc4658;
+    --clr-accent: #61d365;
+    --clr-hover: hsl(240, 96%, 68%);
+
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 2.5rem;
+    --fs-1000: 3rem;
+}
+
+.title-family{
+    font-family: var(--ff-montserrat);
 }
 
 *,
@@ -12,9 +34,53 @@
 }
 
 html{
-    font-family: var(--ff-poppins);
+    font-family: var(--ff-montserrat);
+}
+
+body{
+    background-color: var(--clr-black);
 }
 
 body, h1, p{
     margin: 0;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0.75rem 1.5rem 0.75rem;
+}
+
+.wrapper .wrapper-title a{
+    text-decoration: none;
+    font-size: var(--fs-700);
+    color: var(--clr-white);
+}
+
+.wrapper-nav{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.wrapper .wrapper-nav a{
+    text-decoration: none;
+    color: var(--clr-white);
+    font-size: var(--fs-400);
+    transition: color 0.2s ease;
+}
+
+.wrapper .wrapper-nav a:hover{
+    color: var(--clr-hover);
+    transition: color 0.2s ease;
+}
+
+.main-title{
+    color: var(--clr-white);
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-700);
+    width: min(75%, 100% - 3rem);
+    margin-inline: 1rem;
+    margin-block: 4rem;
+    line-height: 1.1;
 }
