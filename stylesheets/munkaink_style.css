@@ -23,10 +23,6 @@
     --fs-1000: 3rem;
 }
 
-.title-family{
-    font-family: var(--ff-montserrat);
-}
-
 *,
 *::before,
 *::after{
@@ -73,14 +69,4 @@ body, h1, p{
 .wrapper .wrapper-nav a:hover{
     color: var(--clr-hover);
     transition: color 0.2s ease;
-}
-
-.main-title{
-    color: var(--clr-white);
-    font-family: var(--ff-poppins);
-    font-size: var(--fs-700);
-    width: min(75%, 100% - 3rem);
-    margin-inline: 1rem;
-    margin-block: 4rem;
-    line-height: 1.1;
 }
