@@ -9,23 +9,46 @@
     <link rel="stylesheet" href="../stylesheets/munkaink_style.css">
 </head>
 <body>
-    <header class="wrapper">
-        <div class="wrapper-title">
-            <a href="../index.html">CyberNexus</a>
+    <div class="desktop-view">
+        <div class="desktop-title">
+            <h1>Munkáink</h1>
         </div>
-        <div class="wrapper-nav">
-            <a href="../index.html">Kezdőlap</a>
-            <a href="./munkaink.html">Munkáink</a>
-            <a href="./aboutme.html">Rólunk</a>
+        <div class="taskbar">
+            <div class="bg-changer-div">
+                <button type="button" id="backgroundChanger"><i class="fa fa-image"></i></button>
+            </div>
+            <div class="main-btns">
+                <a href="../index.html" title="Kezdőlap"><i class="fa fa-home"></i></a>
+                <a id="fomenu" title="Menü"><i class="fa fa-windows"></i></a>
+                <a href="./aboutme.html" title="Rólunk"><i class="fa fa-address-book"></i></a>
+            </div>
+            <div class="time-etc">
+                <p id="time">Conf...</p>
+                <p id="date">Configur..</p>
+            </div>
         </div>
-    </header>
 
-    <main>
-        <div class="">
-            
+        <div class="bg-changing">
+            <div class="background">
+                <img id="bg_default" src="../assets/images/munkaink-bg-default.jpg" alt="">
+            </div>
+            <div class="background">
+                <img id="bg_secondary" src="../assets/images/second_bg_body.jpg" alt="">
+            </div>
+            <div class="background">
+                <img id="bg_third" src="../assets/images/third_bg_body.jpg" alt="">
+            </div>
         </div>
-    </main>
 
+        <div class="menus">
+            <div class="menus-title">
+                <h2>Menüpontok</h2>
+            </div>
+            <div class="menus-all"></div>
+        </div>
+    </div>
+    
+    <script src="../scripts/clock_for_munkaink.js"></script>
     <script src="../scripts/munkaink.js"></script>
 </body>
 </html>

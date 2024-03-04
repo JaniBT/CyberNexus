@@ -12,8 +12,13 @@
     --clr-black: #000000;
     --clr-red: #cc4658;
     --clr-accent: #61d365;
+    --clr-blue: hsl(207, 100%, 55%);
     --clr-hover: hsl(240, 96%, 68%);
+    --clr-brown: #1f1603;
+    --clr-blueish: hsl(221, 45%, 21%);
 
+    --fs-100: 0.5rem;
+    --fs-200: 0.75rem;
     --fs-400: 1rem;
     --fs-500: 1.25rem;
     --fs-600: 1.5rem;
@@ -21,6 +26,10 @@
     --fs-800: 2rem;
     --fs-900: 2.5rem;
     --fs-1000: 3rem;
+
+    --height-1100: 3.25rem;
+
+    --resp-fs: 5vmin;
 }
 
 *,
@@ -29,44 +38,186 @@
     box-sizing: border-box;
 }
 
-html{
-    font-family: var(--ff-montserrat);
-}
-
 body{
-    background-color: var(--clr-black);
+    overflow: hidden;
 }
 
-body, h1, p{
+body, h1, h2, p{
     margin: 0;
 }
 
-.wrapper{
+.desktop-view{
+    width: 100vw;
+    height: 100dvh;
+    background: url(../assets/images/munkaink-bg-default.jpg) center/cover no-repeat;
+    z-index: 0;
+}
+
+.taskbar{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0.75rem 1.5rem 0.75rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--clr-black);
+    z-index: 2;
 }
 
-.wrapper .wrapper-title a{
+.desktop-title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.desktop-title h1{
+    padding: 3rem;
+    backdrop-filter: blur(0.35rem);
+    font-size: var(--fs-1000);
+    font-family: var(--ff-poppins);
+    font-weight: bolder;
+    color: var(--clr-white);
+}
+
+.bg-changer-div button{
+    margin: 0.5rem 3rem 0.5rem 0.5rem;
+    padding: 0.35rem;
+    border: 1px solid var(--clr-white);
+    border-radius: 0.35rem;
+    background: transparent;
+
+    animation: bg_body_btn 0.8s ease;
+}
+
+.bg-changer-div button:hover{
+    cursor: pointer;
+    background: rgb(255 255 255 / 0.3);
+}
+
+.bg-changer-div button i{
+    font-size: 3.75vmin;
+    color: var(--clr-white);
+}
+
+.bg-changing{
+    background-color: var(--clr-white);
+    border-radius: 0.5rem;
+    position: absolute;
+    margin-left: 0.35rem;
+    top: 87%;
+    transform: translateY(87%);
+    transition: transform 0.5s ease;
+}
+
+.background{
+    --width-height: 2.5rem;
+    width: var(--width-height);
+    height: var(--width-height);
+}
+
+.background img{
+    padding: 0.5rem;
+    width: var(--width-height);
+    height: var(--width-height);
+}
+
+.background img:hover{
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: rgb(0 0 0 / 0.3);
+}
+
+.main-btns{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+
+    animation: middle_btns 0.8s ease;
+}
+
+#fomenu:hover{
+    cursor: pointer;
+}
+
+.main-btns a{
     text-decoration: none;
     font-size: var(--fs-700);
+    margin: 0.1rem;
+    padding: 0.4rem;
     color: var(--clr-white);
+    border-radius: 0.3rem;
 }
 
-.wrapper-nav{
+.main-btns a:hover{
+    background-color: rgb(255 255 255 / 0.3);
+}
+
+.time-etc{
+    animation: date 0.8s ease;
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 0.75rem;
 }
 
-.wrapper .wrapper-nav a{
-    text-decoration: none;
+.time-etc p{
     color: var(--clr-white);
-    font-size: var(--fs-400);
-    transition: color 0.2s ease;
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-200);
 }
 
-.wrapper .wrapper-nav a:hover{
-    color: var(--clr-hover);
-    transition: color 0.2s ease;
+/* Fő menüpontok */
+
+.menus{
+    width: 50%;
+    height: 75%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 250%);
+    background-color: transparent;
+    background-color: rgb(0 0 0 / 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    z-index: 1;
+    transition: transform 0.7s ease;
+}
+
+.menus-title h2{
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--clr-white);
+    font-size: var(--fs-800);
+    font-family: var(--ff-poppins);
+}
+
+/* Kezdetleges animációk */
+
+@keyframes date {
+    0%{
+        transform: translateX(150%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes middle_btns {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes bg_body_btn {
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
