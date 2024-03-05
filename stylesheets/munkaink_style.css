@@ -107,7 +107,7 @@ body, h1, h2, p{
     position: absolute;
     margin-left: 0.35rem;
     top: 87%;
-    transform: translateY(87%);
+    transform: translateY(287%);
     transition: transform 0.5s ease;
 }
 
@@ -191,6 +191,40 @@ body, h1, h2, p{
     color: var(--clr-white);
     font-size: var(--fs-800);
     font-family: var(--ff-poppins);
+}
+
+.menus-all{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    flex: 1;
+    width: 204px;
+    height: 204px;
+}
+
+.menu:hover{
+    cursor: pointer;
+    background-color: rgb(255 255 255 / 0.3);
+}
+
+.menu h3{
+    font-family: var(--ff-poppins);
+    color: var(--clr-white);
+    text-align: center;
+}
+
+.menu img{
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    margin-inline: auto;
 }
 
 /* Kezdetleges animációk */

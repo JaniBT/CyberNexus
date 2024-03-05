@@ -8,7 +8,7 @@ bg_button.onclick = function(e) {
         bg_changer_div.style.transform = "translateY(-87%)"
         changer = false
     } else {
-        bg_changer_div.style.transform = "translateY(87%)"
+        bg_changer_div.style.transform = "translateY(287%)"
         changer = true
     }
     
