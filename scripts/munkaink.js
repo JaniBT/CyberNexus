@@ -54,6 +54,7 @@ fomenu_gomb.onclick = function() {
 
 const lumar_gomb = document.querySelector('#lumar')
 const lumar_menu = document.querySelector('.lumar-menu')
+
 lumar_gomb.onclick = (e) => {
     menu.style.transform = "translate(-50%, 250%)"
     menunyito = true
@@ -67,4 +68,52 @@ lumar_gomb.onclick = (e) => {
 const lumar_exit = document.querySelector('.exit')
 lumar_exit.onclick = (e) => {
     lumar_menu.style.transform = "translate(-250%, -50%)"
+}
+
+const lenon_menu = document.querySelector('.lenon-menu')
+const lenon_gomb = document.querySelector('#lenon')
+lenon_gomb.onclick = (e) => {
+    menu.style.transform = "translate(-50%, 250%)"
+    menunyito = true
+    setTimeout(() => {
+        lenon_menu.style.transform = "translate(-50%, -50%)"
+    })
+}
+
+const lenon_exit = document.querySelector('.exit-lenon')
+lenon_exit.onclick = (e) => {
+    lenon_menu.style.transform = "translate(-250%, -50%)"
+}
+
+
+const roxfort_menu = document.querySelector('.roxfort-menu')
+const roxfort_exit = document.querySelector('#roxfort-exit')
+const roxfort_gomb = document.querySelector('#roxfort')
+
+roxfort_gomb.onclick = (e) => {
+    menu.style.transform = "translate(-50%, 250%)"
+    menunyito = true
+    setTimeout(() => {
+        roxfort_menu.style.transform = "translate(-50%, -50%)"
+    })
+}
+
+roxfort_exit.onclick = (e) => {
+    roxfort_menu.style.transform = "translate(-250%, -50%)"
+}
+
+const darts_gomb = document.querySelector('#darts')
+const darts_exit = document.querySelector('#darts-exit')
+const darts_menu = document.querySelector('.darts-menu')
+
+darts_gomb.onclick = (e) => {
+    menu.style.transform = "translate(-50%, 250%)"
+    menunyito = true
+    setTimeout(() => {
+        darts_menu.style.transform = "translate(-50%, -50%)"
+    })
+}
+
+darts_exit.onclick = (e) => {
+    darts_menu.style.transform = "translate(-250%, -50%)"
 }

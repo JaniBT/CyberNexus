@@ -344,11 +344,128 @@ body, h1, h2, p{
     cursor: pointer;
 }
 
+.exit-lenon{
+    margin-right: 0.5rem;
+}
+
+.exit-lenon i{
+    color: var(--clr-white);
+    font-size: var(--fs-600);
+    font-weight: bold;
+}
+
+.exit-lenon:hover, .exit-lenon i:hover{
+    color: var(--clr-hover);
+    cursor: pointer;
+}
+
+.lenon-menu{
+    overflow: scroll;
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-250%, -50%);
+    /* background-color: transparent;
+    background-color: rgb(0 0 0 / 0.5);
+    backdrop-filter: blur(10px); */
+    background-color: rgb(0 0 0 / 0.6);
+    border-radius: 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    z-index: 1;
+    transition: transform 1s ease;
+}
+
+.lenon-menu h2{
+    margin-inline: auto;
+    color: var(--clr-white);
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-700);
+    text-align: center;
+}
+
+.lenon-menu figcaption{
+    margin-left: 3.5rem;
+}
+
+.roxfort-menu{
+    overflow: scroll;
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-250%, -50%);
+    /* background-color: transparent;
+    background-color: rgb(0 0 0 / 0.5);
+    backdrop-filter: blur(10px); */
+    background-color: rgb(0 0 0 / 0.6);
+    border-radius: 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    z-index: 1;
+    transition: transform 1s ease;
+}
+
+.roxfort-menu h2{
+    color: var(--clr-white);
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-700);
+    text-align: center;
+    margin-inline: auto;
+}
+
+.roxfort-menu figcaption{
+    margin-left: 3.5rem;
+}
+
+.darts-menu{
+    overflow: scroll;
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-250%, -50%);
+    /* background-color: transparent;
+    background-color: rgb(0 0 0 / 0.5);
+    backdrop-filter: blur(10px); */
+    background-color: rgb(0 0 0 / 0.6);
+    border-radius: 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    z-index: 1;
+    transition: transform 1s ease;
+}
+
+.darts-menu h2{
+    color: var(--clr-white);
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-700);
+    text-align: center;
+    margin-inline: auto;
+}
+
+.darts-menu figcaption{
+    margin-left: 7.5rem;
+}
+
 @media screen and (max-width: 1100px) {
     .menus{
         width: 75%;
     }
     .lumar-menu{
+        width: 85%;
+    }
+    .lenon-menu{
+        width: 85%;
+    }
+    .roxfort-menu{
+        width: 85%;
+    }
+    .darts-menu{
         width: 85%;
     }
 }
@@ -358,6 +475,15 @@ body, h1, h2, p{
         width: 90%;
     }
     .lumar-menu{
+        width: 90%;
+    }
+    .lenon-menu{
+        width: 90%;
+    }
+    .roxfort-menu{
+        width: 90%;
+    }
+    .darts-menu{
         width: 90%;
     }
 }
