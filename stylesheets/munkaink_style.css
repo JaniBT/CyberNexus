@@ -62,7 +62,7 @@ body, h1, h2, p{
     bottom: 0;
     left: 0;
     background: var(--clr-black);
-    z-index: 2;
+    z-index: 999;
 }
 
 .desktop-title{
@@ -107,7 +107,7 @@ body, h1, h2, p{
     position: absolute;
     margin-left: 0.35rem;
     top: 87%;
-    transform: translateY(287%);
+    transform: translateY(387%);
     transition: transform 0.5s ease;
 }
 
@@ -182,7 +182,7 @@ body, h1, h2, p{
     background-color: rgb(0 0 0 / 0.3);
     backdrop-filter: blur(10px);
     border-radius: 2rem;
-    z-index: 1;
+    z-index: 2;
     transition: transform 0.7s ease;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -235,19 +235,22 @@ body, h1, h2, p{
 }
 
 .lumar-menu{
-    overflow-y: scroll;
+    overflow: scroll;
     position: absolute;
     width: 65%;
     height: 65%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
+    transform: translate(-250%, -50%);
+    /* background-color: transparent;
     background-color: rgb(0 0 0 / 0.5);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
+    background-color: rgb(0 0 0 / 0.6);
     border-radius: 1rem;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    z-index: 1;
+    transition: transform 1s ease;
 }
 
 .lumar-menu::-webkit-scrollbar{
@@ -255,11 +258,11 @@ body, h1, h2, p{
 }
 
 .lumar-menu h2{
-    margin-block: 1.5rem;
     color: var(--clr-white);
     font-family: var(--ff-poppins);
     font-size: var(--fs-700);
     text-align: center;
+    margin-inline: auto;
 }
 
 .flex-menu{
@@ -300,24 +303,61 @@ body, h1, h2, p{
     margin-left: 0.5rem;
 }
 
-.link-flex-menu{
+.link-flex-menu{ 
     margin-block: 2rem;
     display: flex;
     justify-content: center;
 }
 
 .link-menu a{
+    text-decoration: none;
+    padding: 1rem;
     color: var(--clr-white);
+    transition: all 0.3s ease;
+}
+
+.link-menu a:hover{
+    transition: all 0.3s ease;
+    color: var(--clr-hover);
+}
+
+.main-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-block: 1rem;
+}
+
+.exit{
+    margin-right: 0.5rem;
+}
+
+.exit i{
+    color: var(--clr-white);
+    font-size: var(--fs-600);
+    font-weight: bold;
+}
+
+.exit:hover, .exit i:hover{
+    color: var(--clr-hover);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1100px) {
     .menus{
         width: 75%;
     }
+    .lumar-menu{
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 750px) {
     .menus{
+        width: 90%;
+    }
+    .lumar-menu{
         width: 90%;
     }
 }

@@ -8,7 +8,7 @@ bg_button.onclick = function(e) {
         bg_changer_div.style.transform = "translateY(-87%)"
         changer = false
     } else {
-        bg_changer_div.style.transform = "translateY(287%)"
+        bg_changer_div.style.transform = "translateY(387%)"
         changer = true
     }
     
@@ -50,4 +50,21 @@ fomenu_gomb.onclick = function() {
         menu.style.transform = "translate(-50%, 250%)"
         menunyito = true
     }
+}
+
+const lumar_gomb = document.querySelector('#lumar')
+const lumar_menu = document.querySelector('.lumar-menu')
+lumar_gomb.onclick = (e) => {
+    menu.style.transform = "translate(-50%, 250%)"
+    menunyito = true
+    setTimeout(() => {
+        lumar_menu.style.transform = "translate(-50%, -50%)"
+    }, 1000)
+    
+    
+}
+
+const lumar_exit = document.querySelector('.exit')
+lumar_exit.onclick = (e) => {
+    lumar_menu.style.transform = "translate(-250%, -50%)"
 }
